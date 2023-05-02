@@ -1,6 +1,6 @@
 {
   "name": "@nxg-labs/official-website-template-vite-ts",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "type": "module",
   "license": "ISC",
   "scripts": {
