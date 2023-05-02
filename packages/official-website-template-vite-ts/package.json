@@ -1,5 +1,5 @@
 {
-  "name": "@nxglabs/official-website-template-vite-ts",
+  "name": "@nxg-labs/official-website-template-vite-ts",
   "version": "0.0.5",
   "type": "module",
   "license": "ISC",
@@ -41,5 +41,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "c048447ebff472c67fbc17240c6cbe2d85ef0ee4"
+  "gitHead": "db266dd49de7bf37ac70225ee976a20d51418a5e"
 }
