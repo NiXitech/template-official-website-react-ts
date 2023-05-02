@@ -1,5 +1,6 @@
 {
   "name": "nxglabs-templates",
+  "license": "ISC",
   "workspaces": [
     "packages/*"
   ],
