@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "nxglabs-templates",
   "private": true,
   "workspaces": [
     "packages/*"
