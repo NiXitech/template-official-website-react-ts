@@ -1,6 +1,8 @@
 import { AppRoutes } from '@/interfaces';
-import MobileHome from '@/pages/mobile/home';
-import Home from '@/pages/pc/home';
+import { lazy } from 'react';
+
+export const Home = lazy(() => import('@/pages/pc/home'));
+export const MobileHome = lazy(() => import('@/pages/mobile/home'));
 
 export default [
   {
