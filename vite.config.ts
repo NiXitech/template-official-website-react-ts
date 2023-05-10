@@ -2,9 +2,14 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
+const env = process.env.NODE_ENV;
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  define: {
+    'import.meta.env.NODE_ENV': JSON.stringify(env),
+  },
   css: {
     preprocessorOptions: {
       less: {
