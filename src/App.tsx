@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import isMobileFn from 'is-mobile';
 import routes from './config/routes';
-import { useMemo } from 'react';
+import { Suspense, useMemo } from 'react';
 import { VconsoleSingleton } from './utils';
 
 function App() {
@@ -19,15 +19,17 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          {routes.map((route) => (
-            <Route
-              key={route.name}
-              path={route.path}
-              element={isMobile ? route.mobileComponent : route.component}
-            ></Route>
-          ))}
-        </Routes>
+        <Suspense fallback>
+          <Routes>
+            {routes.map((route) => (
+              <Route
+                key={route.name}
+                path={route.path}
+                element={isMobile ? route.mobileComponent : route.component}
+              ></Route>
+            ))}
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </>
   );

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import 'lib-flexible';
+import './i18';
 // import 'amfe-flexible';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
