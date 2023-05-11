@@ -4,11 +4,18 @@ import path from 'path';
 
 const env = process.env.NODE_ENV;
 
+let apiBaseUrl = 'https://api.example.com';
+
+if (env !== 'prod') {
+  apiBaseUrl = 'https://api.qa.example.com';
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   define: {
     'import.meta.env.NODE_ENV': JSON.stringify(env),
+    API_BASE_URL: JSON.stringify(apiBaseUrl),
   },
   css: {
     preprocessorOptions: {

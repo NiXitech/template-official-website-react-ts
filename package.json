@@ -6,13 +6,14 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=qa vite",
     "build": "npm run build:prod",
-    "build:qa": "cross-env NODE_ENV=qa tsc && vite build",
-    "build:prod": "cross-env NODE_ENV=prod tsc && vite build",
+    "build:qa": "tsc && cross-env NODE_ENV=qa vite build",
+    "build:prod": "tsc && cross-env NODE_ENV=prod vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "amfe-flexible": "^2.2.1",
+    "axios": "^1.4.0",
     "i18next": "^22.4.15",
     "is-mobile": "^4.0.0",
     "lib-flexible": "^0.3.2",
