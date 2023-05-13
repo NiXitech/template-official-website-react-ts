@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@nxglabs-lib/request": "^1.0.0",
     "amfe-flexible": "^2.2.1",
     "axios": "^1.4.0",
     "i18next": "^22.4.15",

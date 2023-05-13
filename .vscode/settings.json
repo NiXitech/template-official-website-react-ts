@@ -4,6 +4,6 @@
     "source.fixAll.prettier": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.requireConfig": true
-  // "typescript.tsdk": "node_modules/typescript/lib",
+  "prettier.requireConfig": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
