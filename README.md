@@ -1,4 +1,5 @@
 # template-official-website-vite-ts
+
 官网项目模板
 
 <br />
@@ -28,16 +29,20 @@
 │   ├── utils 工具
 
 ```
+
 <br />
 
 ## 适配说明
+
 `注意：H5 和 PC 相关文件必须按规范存放，否则不能自动适配`
+
 1. `H5` 采用 `rem` 适配，以 `375px` 为基准
 2. `PC` 默认采用 `vw` 适配，以 `1920px` 为基准（如果对屏幕要求较高使用 `media` 查询，尺寸参考 `App.less`）
 
 <br />
 
-## vscode插件
+## vscode 插件
+
 需要安装 `ESLint` 和 `Prettier - Code formatter` 插件
 
 <br />
@@ -45,7 +50,7 @@
 ## 安装
 
 ```
-pnpm intall
+pnpm install
 ```
 
 ## 运行
