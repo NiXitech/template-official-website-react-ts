@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@nxglabs-lib/request':
-    specifier: ^1.0.0
-    version: 1.0.0
+    specifier: ^1.0.1
+    version: 1.0.1
   amfe-flexible:
     specifier: ^2.2.1
     version: 2.2.1
@@ -647,8 +647,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@nxglabs-lib/request@1.0.0:
-    resolution: {integrity: sha512-rvbzb04wRxgzvSmb1Vv0a0RMlHFR+8smkNec/9m66VkeCIa4LfXhMomcTq44TTqZVOmwwEAvLr+YrnzwFARyow==}
+  /@nxglabs-lib/request@1.0.1:
+    resolution: {integrity: sha512-JA32MGED6WTm2IwxDdakT+9wtT3O7soZmlAdDHvjjQ6ZKYyHMRp6y8zGNbyR0SYbK3cq+c/GDrR5HQ4Mao4POQ==}
     dependencies:
       axios: 1.4.0
     transitivePeerDependencies:
