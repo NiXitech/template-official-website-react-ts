@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
+import './App.less';
 import isMobileFn from 'is-mobile';
 import routes from './config/routes';
 import { Suspense, useMemo } from 'react';
