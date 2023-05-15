@@ -12,7 +12,7 @@ function App() {
     });
   }, []);
 
-  if (import.meta.env.DEV) {
+  if (import.meta.env.DEV && isMobile) {
     VconsoleSingleton.getInstance();
   }
 
