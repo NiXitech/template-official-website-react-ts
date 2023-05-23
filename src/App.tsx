@@ -4,6 +4,7 @@ import isMobileFn from 'is-mobile';
 import routes from './config/routes';
 import { Suspense, useMemo } from 'react';
 import { VconsoleSingleton } from './utils';
+import { EnvEnum } from './enums';
 
 function App() {
   const isMobile = useMemo(() => {
@@ -12,7 +13,7 @@ function App() {
     });
   }, []);
 
-  if (import.meta.env.NODE_ENV && isMobile) {
+  if (import.meta.env.NODE_ENV === EnvEnum.QA && isMobile) {
     VconsoleSingleton.getInstance();
   }
 
