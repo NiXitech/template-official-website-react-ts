@@ -14,9 +14,13 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "{src,mock,tests}/**/*.{ts,tsx,js}": [
+    "*.{ts,tsx,js}": [
       "eslint --fix --max-warnings 0",
       "prettier --write",
+      "git add ."
+    ],
+    "*.{css,less,sass,scss}": [
+      "stylelint --fix",
       "git add ."
     ]
   },
@@ -54,6 +58,7 @@
     "less": "^4.1.3",
     "less-loader": "^11.1.0",
     "lint-staged": "^13.2.2",
+    "postcss-less": "^6.0.0",
     "postcss-pxtorem": "^6.0.0",
     "prettier": "^2.8.8",
     "stylelint": "^15.6.2",

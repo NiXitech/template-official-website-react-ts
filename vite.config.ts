@@ -2,6 +2,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
+const VARIABLE_LESS_PATH = './src/variable.less';
+
 const env = process.env.NODE_ENV;
 
 let apiBaseUrl = 'https://api.example.com';
@@ -21,6 +23,7 @@ export default defineConfig({
     preprocessorOptions: {
       less: {
         javascriptEnabled: true,
+        additionalData: `@import "${VARIABLE_LESS_PATH}";`,
       },
     },
   },
