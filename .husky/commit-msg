@@ -4,3 +4,4 @@
 echo "Lint Commit Message"
 npx --no -- commitlint --edit "${1}"
 echo "Finished Lint Commit Message"
+
