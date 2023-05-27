@@ -16,7 +16,8 @@
   "lint-staged": {
     "{src,mock,tests}/**/*.{ts,tsx,js}": [
       "eslint --fix --max-warnings 0",
-      "prettier --write"
+      "prettier --write",
+      "git add ."
     ]
   },
   "dependencies": {
