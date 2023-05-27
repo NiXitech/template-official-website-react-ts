@@ -9,7 +9,15 @@
     "build:qa": "tsc && cross-env NODE_ENV=qa vite build",
     "build:prod": "tsc && cross-env NODE_ENV=prod vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "{src,mock,tests}/**/*.{ts,tsx,js}": [
+      "eslint --fix --max-warnings 0",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@nxglabs-lib/request": "^1.0.1",
@@ -26,25 +34,38 @@
     "react-router-dom": "^6.10.0"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^17.6.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.14",
+    "commitizen": "^4.3.0",
+    "commitlint": "^17.6.3",
     "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "husky": "^8.0.0",
     "less": "^4.1.3",
     "less-loader": "^11.1.0",
+    "lint-staged": "^13.2.2",
     "postcss-pxtorem": "^6.0.0",
     "prettier": "^2.8.8",
+    "stylelint": "^15.6.2",
+    "stylelint-config-standard": "^33.0.0",
     "typescript": "^5.0.2",
     "vconsole": "^3.15.0",
     "vite": "^4.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "publishConfig": {
     "access": "public"

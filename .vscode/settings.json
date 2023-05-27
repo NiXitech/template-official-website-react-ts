@@ -5,5 +5,6 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.requireConfig": true,
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "cSpell.words": ["amfe", "nxglabs", "pxtorem", "stylelint", "vconsole"]
 }
