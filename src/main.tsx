@@ -6,9 +6,12 @@ import 'normalize.css';
 import './i18';
 // import 'lib-flexible';
 import 'amfe-flexible';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
 );
