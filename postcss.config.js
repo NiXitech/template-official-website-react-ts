@@ -19,7 +19,19 @@ export default {
       rootValue: 37.5, // 设计稿宽度的1/ 10
       propList: ['*', '!border'], // 除 border 外所有px 转 rem
       selectorBlackList: selectorBlackList, // 过滤掉.nxg-开头的class，不进行rem转换
-      include: [mobileReg],
+      exclude: (filePath) => {
+        const pcRegList = [
+          /[\\/](src)[\\/](components|pages)[\\/](pc)/,
+          /[\\/](src)[\\/]App.less|index.less|variable.less/,
+        ];
+        let isExcludeFile = false;
+        pcRegList.forEach((pcReg) => {
+          if (filePath.match(pcReg) !== null) {
+            isExcludeFile = true;
+          }
+        });
+        return isExcludeFile;
+      },
     },
     // vw适配 PC适配
     'postcss-px-to-viewport': {
